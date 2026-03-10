@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Register Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="card">
+  <div class="tabs">
+    <button id="tabRegister" class="active">Register</button>
+    <button id="tabLogin">Login</button>
+  </div>
+
+  <form id="registerForm">
+    <h2>Register</h2>
+
+    <label>Username</label>
+    <input id="regUsername" type="text">
+    <small class="msg" id="uMsg"></small>
+
+    <label>Email</label>
+    <input id="regEmail" type="text">
+    <small class="msg" id="eMsg"></small>
+
+    <label>Phone</label>
+    <input id="regPhone" type="text">
+    <small class="msg" id="pMsg"></small>
+
+    <label>Password</label>
+    <input id="regPassword" type="password">
+    <div class="meter"><span id="pwMeter"></span></div>
+    <small class="msg" id="pwMsg"></small>
+
+    <button class="btn" type="submit">Register</button>
+  </form>
+
+  <form id="loginForm" class="hidden">
+    <h2>Login</h2>
+
+    <label>Email</label>
+    <input id="loginEmail" type="text">
+
+    <label>Password</label>
+    <input id="loginPassword" type="password">
+
+    <small class="msg" id="loginMsg"></small>
+
+    <button class="btn" type="submit">Login</button>
+    <button type="button" id="toRegister" class="btn secondary">
+      Back to Register
+    </button>
+  </form>
+
+  <div id="dashboard" class="hidden">
+    <h2>Dashboard</h2>
+
+    <div class="dash">
+
+      <div class="user-info">
+        <strong id="dashName"></strong>
+        <div class="small-muted" id="dashEmailPhone"></div>
+      </div>
+
+      <button id="logoutBtn" class="btn secondary">Logout</button>
+      <button id="deleteAccountBtn" class="danger">
+        Delete My Account
+      </button>
+
+      <div style="margin-top:12px;">
+        <strong>Registered users</strong>
+        <div class="user-list" id="userList"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
